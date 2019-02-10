@@ -5,4 +5,4 @@
 [![Docker Build Status](https://img.shields.io/docker/build/arcaneio/kafka-cli.svg?style=flat)](https://hub.docker.com/r/arcaneio/kafka-cli/)
 [![license](https://img.shields.io/github/license/arcane-io/docker-kafka-cli.svg)](https://github.com/arcane-io/docker-kafka-cli)
 
-Docker image with Kafka cli based on <https://github.com/infinimesh/kaf>
+Alpine based docker image with some useful tools and Kafka CLI based on <https://github.com/infinimesh/kaf>
