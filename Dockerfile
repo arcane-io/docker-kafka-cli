@@ -6,6 +6,7 @@ RUN apk add --update --no-cache \
     tar curl jq \
     openssh-client
 
-RUN curl https://raw.githubusercontent.com/infinimesh/kaf/master/godownloader.sh | BINDIR=/usr/local/bin bash
+RUN mkdir -p ~/.kaf && \
+    curl https://raw.githubusercontent.com/infinimesh/kaf/master/godownloader.sh | BINDIR=/usr/local/bin bash
 
 ENTRYPOINT [ "/bin/bash", "-l", "-c" ]

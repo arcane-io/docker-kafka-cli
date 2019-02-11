@@ -6,3 +6,25 @@
 [![license](https://img.shields.io/github/license/arcane-io/docker-kafka-cli.svg)](https://github.com/arcane-io/docker-kafka-cli)
 
 Alpine based docker image with some useful tools and Kafka CLI based on <https://github.com/infinimesh/kaf>
+
+## Usage examples
+
+Example ~/.kaf/config
+
+```yaml
+current-cluster: "my-kafka-cluster"
+clusters:
+- name: my-kafka-cluster
+  brokers:
+  - kafka-broker-1:9092
+  - kafka-broker-2:9092
+  - kafka-broker-3:9092
+  SASL: null
+  security-protocol: ""
+```
+
+Run in kubernetes
+
+```bash
+kubectl run kafka-cli -it --image=arcaneio/kafka-cli --restart=Never bash
+```
