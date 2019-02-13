@@ -43,25 +43,25 @@ At the bash prompt type `kaf` for usage examples.
     apiVersion: v1
     kind: Pod
     metadata:
-    name: kafka-cli
+      name: kafka-cli
     spec:
-    containers:
-    - name: kafka-cli
+      containers:
+      - name: kafka-cli
         args: ["echo $KAF_CONFIG | base64 -d > ~/.kaf/config && while true; do sleep 10000; done"]
         env:
         - name: KAF_CONFIG
-        value: Y3VycmVudC1jbHVzdGVyOiAibXkta2Fma2EtY2x1c3RlciIKY2x1c3RlcnM6Ci0gbmFtZTogbXkta2Fma2EtY2x1c3RlcgogIGJyb2tlcnM6CiAgLSBrYWZrYS1icm9rZXItMTo5MDkyCiAgLSBrYWZrYS1icm9rZXItMjo5MDkyCiAgLSBrYWZrYS1icm9rZXItMzo5MDkyCiAgU0FTTDogbnVsbAogIHNlY3VyaXR5LXByb3RvY29sOiAiIg==
+          value: Y3VycmVudC1jbHVzdGVyOiAibXkta2Fma2EtY2x1c3RlciIKY2x1c3RlcnM6Ci0gbmFtZTogbXkta2Fma2EtY2x1c3RlcgogIGJyb2tlcnM6CiAgLSBrYWZrYS1icm9rZXItMTo5MDkyCiAgLSBrYWZrYS1icm9rZXItMjo5MDkyCiAgLSBrYWZrYS1icm9rZXItMzo5MDkyCiAgU0FTTDogbnVsbAogIHNlY3VyaXR5LXByb3RvY29sOiAiIg==
         image: arcaneio/kafka-cli
         imagePullPolicy: Always
         resources:
-        requests:
+          requests:
             cpu: "200m"
             memory: "200Mi"
-        limits:
+          limits:
             cpu: "500m"
             memory: "800Mi"
-    dnsPolicy: ClusterFirst
-    restartPolicy: Never
+      dnsPolicy: ClusterFirst
+      restartPolicy: Never
     ```
 
 2. deploy the pod
